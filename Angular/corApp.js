@@ -30,6 +30,7 @@ angular.module('corApp', [])
     }; // End poster function
 
     that.cleaner = function() {
+      that.hurl = ''; 
       that.respy = ''; 
     };
 	
