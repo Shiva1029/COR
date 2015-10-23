@@ -3,7 +3,7 @@ namespace myProxy;
 
 class HTTP_Proxy {
 
-	public function getURL($url) {
+	public function getURL($url, $basic) {
 		preg_match("/^https?\:\/\/([a-z\.]+)\//i", $url, $matches);    // Case In-sensitive
 		$domain = $matches[1];
 		$curl = curl_init();
@@ -15,7 +15,7 @@ class HTTP_Proxy {
 		"Content-Type: text/html", 
 		"Referer: " . $domain, 
 		"Origin: " . $domain,
-		"Authorization: Basic ASDASDSJABJNKXNXXSADASD="
+		"Authorization: Basic " . $basic
 	    ));
 		$html = curl_exec($curl);
 		curl_close ($curl);
