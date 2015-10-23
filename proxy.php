@@ -6,7 +6,6 @@ class HTTP_Proxy {
 	public function getURL($url) {
 		preg_match("^https?\:\/\/([a-z\.]+)\/i", $url, $matches);    // Case In-sensitive
 		$domain = $matches[1];
-		echo $domain;
 		$curl = curl_init();
 		curl_setopt($curl, CURLOPT_URL, $url);
 		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
