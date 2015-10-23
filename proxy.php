@@ -15,7 +15,7 @@ class HTTP_Proxy {
 		"Content-Type: text/html", 
 		"Referer: " . $domain, 
 		"Origin: " . $domain,
-		"Authorization: Basic NTAyNDAwNDc4OkVEU0Z1bmNAMjJwd2Q="
+		"Authorization: Basic ASDASDSJABJNKXNXXSADASD="
 	    ));
 		$html = curl_exec($curl);
 		curl_close ($curl);
